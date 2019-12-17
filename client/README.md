@@ -1,1 +1,1 @@
-very basic react setup, no styling. Mainly focusing on Docker implementation. 
+very basic react setup, no styling. Mainly focusing on Docker implementation.

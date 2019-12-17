@@ -11,5 +11,3 @@ const OtherPage = ()=> {
 };
 
 export default OtherPage;
-
-
