@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Fragment>
         <header>
-          <h1>hi im your react app</h1>
+          <h1>Fibonacci Calculator</h1>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
