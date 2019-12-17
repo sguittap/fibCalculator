@@ -1,0 +1,1 @@
+very basic react setup, no styling. Mainly focusing on Docker implementation. 
