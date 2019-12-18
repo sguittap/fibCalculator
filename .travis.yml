@@ -11,3 +11,8 @@ afer_success:
   - docker build -t sguittap/multi-nginx ./nginx
   - docker build -t sguittap/multi-server ./server
   - docker build -t sguittap/multi-worker ./worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push sguittap/multi-client
+  - docker push sguittap/multi-nginx
+  - docker push sguittap/multi-server
+  - docker push sguittap/multi-worker
