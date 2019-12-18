@@ -1,0 +1,13 @@
+language: generic 
+sudo: required
+services: 
+  - docker
+before_install: 
+  - docker build -t sguittap/react-test -f ./client/Dockerfile.dev ./client
+script:
+  - docker run -e CI=true sguittap/react-test npm test
+afer_success:
+  - docker build -t sguittap/multi-client ./client
+  - docker build -t sguittap/multi-nginx ./nginx
+  - docker build -t sguittap/multi-server ./server
+  - docker build -t sguittap/multi-worker ./worker
