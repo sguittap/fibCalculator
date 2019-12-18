@@ -16,3 +16,21 @@ afer_success:
   - docker push sguittap/multi-nginx
   - docker push sguittap/multi-server
   - docker push sguittap/multi-worker
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: Fibcalculator
+  env: Fibcalculator-env
+  bucket_name: elasticbeanstalk-us-east-2-557287904285
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  
+  
+
+
+
+
